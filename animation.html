@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>animation</title>
+    <style>
+      @keyframes sliding {
+        from {
+          background-color: lightseagreen;
+          transform: translateX(0px);
+        }
+        to {
+          transform: translateX(300px);
+          background: red;
+        }
+      }
+      .stage {
+        width: 400px;
+        height: 400px;
+        background-color: lightcoral;
+      }
+
+      .ball {
+        height: 100px;
+        width: 100px;
+        background-color: lightseagreen;
+        border-radius: 50%;
+        animation: sliding 1s ease-in-out 0.5s infinite alternate;
+        animation-play-state: running;
+        transition: 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
